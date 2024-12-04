@@ -24,7 +24,7 @@ const ProductFilter: React.FC<Props> = ({ products }) => {
   };
 
   const handleSortChange = (order: 'asc' | 'desc') => {
-    setFilteredProducts([...filteredProducts].sort((a, b) => (order === 'asc' ? a.price - b.price : b.price - a.price)));
+    setFilteredProducts([...filteredProducts].sort((a, b) => (order === 'asc' ? b.price - a.price : a.price - b.price)));
   };
 
   return (
